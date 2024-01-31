@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--shadow);
+    color: #fff;
+    height: 5rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    height: 5rem;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.logo a img{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 162px;
+    box-sizing: border-box;
+    margin-left: 2rem;
+}
+
+/* .navmenu {
+    align-items: center;
+    list-style: none;
+    display: inline-flex;
+    width: 50%;
+    margin: 0 70px 0 70px;
+    padding: 0;
+} */
+
+.navmenu {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navmenu li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.navmenu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navmenu li:hover{   
+    background-color: rgb(53, 101, 165);
+}
+
+nav .akun{
+    margin-right: 20px;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+nav .akun:hover{
+    background-color: rgb(53, 101, 165);
+}
+
+.navmenu-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navmenu {
+        display: none;
+    }
+
+    .navmenu-toggle {
+        display: block;
+    }
+
+    .navmenu-toggle.active {
+        color: #fff;
+    }
+
+    .navmenu-toggle.active ~ .navmenu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .navmenu-toggle.active ~ .navmenu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navmenu-toggle.active ~ .navmenu li:last-child {
+        margin-bottom: 0;
+    }
+}

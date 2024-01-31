@@ -1,0 +1,877 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto;
+    background-color: var(--bg);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
+}
+
+/*Nav*/
+nav{
+    display: flex;
+    background-color: var(--bcg);
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    box-sizing: border-box;
+}
+
+.nav-left{
+    display: flex;
+    padding-left: 0.1rem;
+    align-items: left;
+    margin-right: 1rem;
+}
+
+.nav-right{
+    display: flex;
+    padding-left: 0.1rem;
+    align-items: right;
+}
+
+.nav-left a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: .8125rem;
+    font-weight: 300;
+    padding: 0.25rem;
+    margin-top: 0.8rem;
+}
+
+.nav-left p{
+    display: inline-block;
+    color: var(--primary);
+    font-size: .8125rem;
+    font-weight: 300;
+    padding: 0.25rem;
+}
+
+.nav-left .bantuan{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.nav-left .bantuan .bantuan-list{
+    visibility: hidden;
+    position: absolute;
+    width: max-content;
+    text-align: left;
+    z-index: -1;
+    background-color: var(--bcg);
+    box-shadow: 1px 1px 2.4px 0 var(--shadow);
+    border-radius: 0.1rem;
+    box-sizing: border-box;
+    transform: translateY(-2em);
+    transition: all 0.2s ease 0s, visibility 0s linear 0s, z-index 0s linear 0s;
+}
+
+.bantuan-list a{
+    color: var(--primary);
+    padding: 0.2rem;
+    text-decoration: none;;
+    display: block;
+    font-size: .8125rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+}
+
+.bantuan:hover .bantuan-list{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0s;
+}
+
+
+.bantuan-list a:hover{
+    background-color: rgb(233, 236, 240);
+}
+
+.nav-left .follow{
+    cursor: auto;
+}
+
+.nav-left .follow::after{
+    transform: scaleX(0);
+}
+
+.nav-left .follow:hover::after{
+    transform: scaleY(1);
+}
+
+.nav-right{
+    display: flex;
+    padding-right: 1rem;
+    align-items: center;
+}
+
+.nav-left a:hover{
+    color: grey;
+}
+
+.nav-right a:hover{
+    color: grey;
+}
+
+.nav-right a{
+    font-size: 1.2rem;
+}
+
+.nav-right .menu-profil{
+    color: var(--primary);
+    margin: 0 0.5rem;
+}
+
+.nav-right .menu-profil i{
+    color: var(--primary);
+}
+
+.nav-right .menu-profil{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sub-menu{
+    visibility: hidden;
+    position: absolute;
+    text-align: left;
+    z-index: -1;
+    right: 0;
+    width: 13rem;
+    background-color: var(--bg);
+    box-shadow: 1px 1px 2.4px 0 var(--shadow);
+    transform: translateY(-2em);
+    transition: all 0.2s ease 0s, visibility 0s linear 0s, z-index 0s linear 0s;
+    margin-right: 1.4em;
+    margin-top: -1em;
+}
+
+.sub-menu i{
+    margin-left: 0.5rem ;
+    margin-right: 0.5rem;
+}
+
+.sub-menu a{
+    color: var(--primary);
+    padding: 0.5rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.sub-menu a:hover{
+    color: var(--primary);
+    background-color: rgb(233, 236, 240);
+}
+
+.menu-profil:hover .sub-menu{
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0.1s;
+}
+
+.header-all{
+    top: 0;
+    display: block;
+    position: fixed;
+    height: 8rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 0;
+    z-index: 1000;
+}
+
+.header-containsrc-chart{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    box-sizing: border-box;
+    line-height: 2rem;
+    margin: 0;
+    padding-right: 1rem;
+    padding-left: 0.2rem;
+    border-radius: 0 0 1rem 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0.5px 0.5px 5px var(--shadow);
+    background-color: #f3f4f5;
+}
+
+.header-containsrc-chart .gp{
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: 0.5rem;
+    padding-top: 0.1rem;
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart .gp img{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 162px;
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart .gp a{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.header-containsrc-chart .gp{
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    color: var(--primary);
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.header-containsrc-chart .kategori-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header-containsrc-chart .kategori-icon .kategori-list{
+    visibility: hidden;
+    position: absolute;
+    width: max-content;
+    text-align: left;
+    z-index: -1;
+    background-color: var(--bg);
+    box-shadow: 1px 1px 2.4px 0 var(--shadow);
+    box-sizing: border-box;
+    transform: translateY(-5em);
+    transition: all 0.2s ease 0s, visibility 0s linier 0s, z-index 0s linier 0s;
+}
+
+.kategori-list a{
+    color: var(--primary);
+    padding: 0.2rem;
+    text-decoration: none;
+    display: grid;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.2rem 1rem;
+}
+
+.kategori-icon:hover .kategori-list {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 1.2s;
+}
+
+.kategori-list a:hover {
+    background-color: rgb(233, 236, 240);
+}
+
+.header-containsrc-chart .src-box{
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+.header-containsrc-chart .src-box form{
+    width: 100%;
+    display: flex;
+    height: 2rem;
+    right: 0;
+    align-items: center;
+    margin: 0.1rem;
+    margin-right: 0;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 0.2rem;
+}
+
+.header-containsrc-chart .src-box input{
+    width: 96%;
+    height: 1.5rem;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: unset;
+    padding-right: 0.5rem;
+    overflow: auto;
+}
+
+.header-containsrc-chart .src-box button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.1rem;
+}
+
+.header-containsrc-chart button i:hover{
+    color: var(--decor);
+}
+
+.header-containsrc-chart .chart{
+    display: inline-block;
+    align-items: center;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    margin-right: 2rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.header-containsrc-chart .chart p{
+    visibility: hidden;
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    box-shadow: 1px 1px 2.4px 0 var(--shadow);
+    box-sizing: border-box;
+    border: 1px solid black;
+    transform: translateY(-5em);
+    transform: translateX(-10em);
+    transition: all 0.2s ease 0s, visibility 0s linier 0s, z-index 0s linier 0s;
+}
+
+.chart p{
+    color: var(--primary);
+    padding: 0.2rem;
+    text-decoration: none;
+    display: grid;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.2rem 1rem;
+    position: absolute;
+    margin-left: -13rem;
+    margin-top: 0.7rem;
+}
+
+.chart:hover p{
+    visibility: visible;
+    opacity: 1;
+    z-index: 400;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 1.2s;
+}
+
+/*main*/
+.main {
+    display: flex;
+    margin: 7rem 1rem 1rem 1rem;
+    padding: 0.5rem 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.main aside{
+    height: 5rem;
+    width: 20%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    display: block;
+}
+
+.main .text{
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid var(--shadow);
+}
+
+aside a{
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 700;
+    justify-content: left;
+    align-items: left;
+    color: var(--primary);
+    display: block;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--shadow);
+}
+
+aside a:hover{
+    color: var(--shadow);
+}
+
+.main .text{
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid var(--shadow);
+}
+
+.text h3{
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.6em;
+}
+
+.text p{
+    text-align: justify;
+    line-height: 1.6rem;
+    padding: 0.5rem 0;
+    text-indent: 3em;
+}
+
+.text p, .text h3{
+    margin-left: 1rem;
+}
+
+/*Footer*/
+footer{
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #f4f4ff;
+    color: var(--primary);
+    box-shadow: 0.5px 0.5px 5px var(--shadow);
+    height: auto;
+    width: 100%;
+}
+
+footer .bawah{
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+footer .bawah hr{
+    border: 1px solid var(--shadow);
+    width: 100%;
+}
+
+footer .bawah p{
+    font-size: 0.9rem;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 0.2rem;
+}
+
+footer .atas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+footer .AboutUs{
+    width: max-content;
+    margin-left: 1rem;
+    flex: 2;
+}
+
+footer .AboutUs p{
+    margin-right: 2rem;
+}
+
+footer .about-icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    height: 4rem;
+}
+
+
+footer .AboutUs img{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 162px;
+    box-sizing: border-box;    
+}
+
+footer p{
+    margin-top: 0;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+
+footer .pay-cat{
+    display: block;
+    justify-content: space-between;
+    padding: 0.2rem 0.2rem;
+
+}
+
+footer .Payment{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer h3{
+    margin-bottom: 0;
+}
+
+footer .Payment-1,
+footer .Payment-2 {
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+    width: 4.5rem;
+}
+
+footer .Payment .detail-pay,
+footer .Payment .detail-pay-link{
+    width: 4.5rem;
+}
+
+footer .Payment .detail-pay img{
+    display: flex;
+    box-sizing: border-box;
+    width: 4rem;
+    height: 1.875rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem;
+    background-color: white;
+    box-shadow: 0 0.5px 0.5px var(--shadow);
+    overflow: hidden;
+    border-radius: 0.125rem;
+}
+
+footer .Payment .detail-pay-link img{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 4rem;
+    height: 1.875rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 1rem;
+    background-color: white;
+    box-shadow: 0 0.5px 0.5px var(--shadow);
+    overflow: hidden;
+    border-radius: 0.125rem;
+}
+
+footer .FollowUs {
+    display: block;
+    width: 22rem;
+}
+
+footer .informasi{
+    flex: 1;
+    text-align: left;
+    margin-left: 1.5rem;
+    margin-top: 0.15rem;
+}
+
+footer .informasi p{
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 0.5rem;
+    text-align: left;
+}
+
+footer .informasi .address,
+footer .informasi .mail {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+footer .informasi .mail a{
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 300;
+}
+
+footer .informasi i {
+    margin-right: 0.8rem;
+}
+
+footer .informasi .fa-map-location-dot {
+    margin-top: 0.4rem;
+}
+
+footer .informasi .mail i{
+    margin-top: 0.4rem;
+}
+
+footer .informasi p {
+    line-height: 1.6rem;
+}
+
+footer .Ikuti{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.8rem;
+    width: 4.5rem;
+}
+
+footer .Category-list li{
+    display: block;
+    width: 7rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: var(--primary);
+}
+
+footer .Ikuti{
+    flex: 1;
+}
+
+footer .Ikuti i {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+footer .Ikuti a {
+    line-height: 0.2rem;
+}
+
+footer .Ikuti li{
+    width: 10rem;
+}
+
+footer .Ikuti a{
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 300;
+}
+
+/* Media Queries - Responsive */
+
+/* Iphone SE */
+@media (max-width: 375px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem auto 0.5rem;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone XR */
+@media (max-width: 414px){
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.3em;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone 12 Pro */
+@media (max-width: 390px){
+    nav{
+        font-size: 75%;
+        height: 3rem;
+        align-items: center;
+    }
+
+    .nav-left .bantuan{
+        align-items: center;
+        padding: 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    .follow-list{
+        display: flex;
+        align-items: center;
+    }
+
+    .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .chart{
+        margin-left: 0;
+    }
+
+    .nav-right{
+        margin-top: 0;
+        align-items: top;
+    }
+}
+
+/* Pixel 5 */
+@media (max-width: 393px){
+    nav{
+        height: 3rem;
+        font-size: 75%;
+    }
+
+    .nav-left .follow-list{
+        display: flex;
+    }
+}
+
+/* Samsung Galaxy S8*/
+@media (max-width: 360px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+        padding: 0 auto;
+    }
+
+    .header-containsrc-chart{
+        padding: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .chart{
+        font-size: 1rem;
+        margin: auto 0;
+        margin-left: 0.5rem;
+    }
+
+    .header-containsrc-chart{
+        font-size: 80%;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem;
+    }
+}
+
+/* Samsung Galaxy Fold */
+@media (max-width: 280px){
+    nav{
+        font-size: 70%;
+        height: 4rem;
+    }
+
+    .nav-left .follow-list{
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .cart{
+        right: -130%;
+    }
+
+    aside{
+        font-size: 75%;
+        width: 30%;
+    }
+}

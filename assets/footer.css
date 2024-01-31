@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+footer{
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #f4f4ff;
+    color: var(--primary);
+    box-shadow: 0.5px 0.5px 5px var(--shadow);
+    height: auto;
+    width: 100%;
+}
+
+footer .bawah{
+    width: 95%;
+    text-align: center;
+    margin: auto;
+}
+
+footer .bawah hr{
+    border: 1px solid var(--shadow);
+    width: 100%;
+}
+
+footer .bawah p{
+    font-size: 0.9rem;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 0.2rem;
+}
+
+footer .atas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+footer .AboutUs{
+    width: max-content;
+    margin-left: 1rem;
+    flex: 2;
+}
+
+footer .AboutUs p{
+    margin-right: 2rem;
+}
+
+footer .about-icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    height: 4rem;
+    cursor: pointer;
+}
+
+
+footer .AboutUs img{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 162px;
+    box-sizing: border-box;    
+}
+
+footer p{
+    margin-top: 0;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+
+footer .pay-cat{
+    display: block;
+    justify-content: space-between;
+    padding: 0.2rem 0.2rem;
+
+}
+
+footer .Payment{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer h3{
+    margin-bottom: 0;
+}
+
+footer .Payment-1,
+footer .Payment-2 {
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+    width: 4.5rem;
+}
+
+footer .Payment .detail-pay,
+footer .Payment .detail-pay-link{
+    width: 4.5rem;
+}
+
+footer .Payment .detail-pay img{
+    display: flex;
+    box-sizing: border-box;
+    width: 4rem;
+    height: 1.875rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem;
+    background-color: white;
+    box-shadow: 0 0.5px 0.5px var(--shadow);
+    overflow: hidden;
+    border-radius: 0.125rem;
+}
+
+footer .Payment .detail-pay-link img{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 4rem;
+    height: 1.875rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 1rem;
+    background-color: white;
+    box-shadow: 0 0.5px 0.5px var(--shadow);
+    overflow: hidden;
+    border-radius: 0.125rem;
+}
+
+footer .FollowUs {
+    display: block;
+    width: 22rem;
+}
+
+footer .informasi{
+    flex: 1;
+    text-align: left;
+    margin-left: 1.5rem;
+    margin-top: 1.4rem;
+}
+
+footer .informasi p{
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 0.5rem;
+    text-align: left;
+}
+
+footer .informasi .address,
+footer .informasi .mail {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+footer .informasi .mail a{
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 300;
+}
+
+footer .informasi i {
+    margin-right: 0.8rem;
+}
+
+footer .informasi .fa-map-location-dot {
+    margin-top: 0.4rem;
+}
+
+footer .informasi .mail i{
+    margin-top: 0.4rem;
+}
+
+footer .informasi p {
+    line-height: 1.6rem;
+}
+
+footer .Ikuti{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.8rem;
+    width: 4.5rem;
+}
+
+footer .Category-list li{
+    display: block;
+    width: 7rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: var(--primary);
+}
+
+footer .Ikuti{
+    flex: 1;
+}
+
+footer .Ikuti i {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+footer .Ikuti a {
+    line-height: 0.2rem;
+}
+
+footer .Ikuti li{
+    width: 10rem;
+}
+
+footer .Ikuti a{
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 300;
+}

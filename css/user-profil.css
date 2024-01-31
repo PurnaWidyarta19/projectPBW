@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.profile {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 180px;
+    border-radius: 50%;
+    display: block;
+    margin: 5rem auto 20px;
+}
+
+.profile-name {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-email,
+.profile-tlpn{
+    margin: 5px 0;
+}
+
+.profile-info p,
+.profile-info h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.profile-info p:last-child {
+    margin-bottom: 20px;
+}

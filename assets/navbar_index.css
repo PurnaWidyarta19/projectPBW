@@ -1,0 +1,363 @@
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    background-color: var(--bcg);
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    box-sizing: border-box;
+}
+
+.nav-left{
+    display: flex;
+    padding-left: 0.1rem;
+    align-items: left;
+    margin-right: 1rem;
+}
+
+.nav-right{
+    display: flex;
+    padding-left: 0.1rem;
+    align-items: right;
+}
+
+.nav-right a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.25rem;
+}
+
+.nav-left a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.25rem;
+}
+
+.nav-left .follow{
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .follow p{
+    display: inline-block;
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.25rem;
+    color: black;
+    margin-top: 0.3rem;
+}
+
+.nav-left .follow-list{
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    height: 2rem;
+    margin-top: 0.2rem;
+}
+
+.nav-left .follow-list a{
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+}
+
+.nav-left .bantuan{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.nav-left .bantuan a{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.nav-left .bantuan .bantuan-list{
+    overflow: hidden;
+    position: absolute;
+    max-height: 0;
+    width: max-content;
+    text-align: left;
+    top: 60px;
+    z-index: 1;
+    background-color: var(--bcg);
+    box-shadow: 1px 1px 2.4px 0 var(--shadow);
+    border-radius: 0.1rem;
+    box-sizing: border-box;
+    transform: translateY(-2em);
+    transition: max-height 0.3s;
+}
+
+.nav-left .bantuan .bantuan-list.show{
+    max-height: 400px;
+    transition: max-height 0.3s;
+}
+
+.bantuan-list a{
+    color: var(--primary);
+    padding: 0.2rem;
+    text-decoration: none;;
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+}
+
+.bantuan-list a:hover{
+    background-color: rgb(233, 236, 240);
+}
+
+.nav-left .follow{
+    cursor: auto;
+}
+
+.nav-left .follow::after{
+    transform: scaleX(0);
+}
+
+.nav-left .follow:hover::after{
+    transform: scaleY(1);
+}
+
+.nav-left .order{
+    margin-left: 0.3rem;
+}
+
+.nav-right a:hover{
+    color: grey;
+}
+
+.header-all{
+    display: block;
+    position: fixed;
+    height: 8rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 0;
+    z-index: 1000;
+}
+
+.header-containsrc-chart{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    box-sizing: border-box;
+    line-height: 2rem;
+    margin: 0;
+    padding-right: 1rem;
+    padding-left: 0.2rem;
+    border-radius: 0 0 1rem 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0.5px 0.5px 5px var(--shadow);
+    background-color: #f3f4f5;
+}
+
+.header-containsrc-chart .gp{
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: 0.5rem;
+    padding-top: 0.1rem;
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart .gp img{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 162px;
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart .gp a{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.header-containsrc-chart .gp{
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    color: var(--primary);
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.header-containsrc-chart .kategori-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header-containsrc-chart .kategori-icon .kategori-list{
+    overflow: hidden;
+    position: absolute;
+    width: max-content;
+    text-align: left;
+    z-index: 1;
+    max-height: 0;
+    background-color: var(--bg);
+    box-shadow: 1px 1px 2.4px 0 var(--shadow);
+    box-sizing: border-box;
+    transform: translateY(-5em);
+    transition: max-height 0.3s;
+    top: 105px;
+}
+
+.header-containsrc-chart .kategori-icon .kategori-list.show-menu{
+    max-height: 400px;
+}
+
+.kategori-list a{
+    color: var(--primary);
+    padding: 0.2rem;
+    text-decoration: none;
+    display: grid;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.2rem 1rem;
+}
+
+.kategori-list a:hover {
+    background-color: rgb(233, 236, 240);
+}
+
+.header-containsrc-chart .src-box{
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+.header-containsrc-chart .src-box form{
+    width: 100%;
+    display: flex;
+    height: 2rem;
+    right: 0;
+    align-items: center;
+    margin: 0.1rem;
+    margin-right: 0;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 0.2rem;
+}
+
+.header-containsrc-chart .src-box input{
+    width: 96%;
+    height: 1.5rem;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: unset;
+    padding-right: 0.5rem;
+    overflow: auto;
+}
+
+.header-containsrc-chart .src-box button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.1rem;
+}
+
+.header-containsrc-chart button i:hover{
+    color: var(--decor);
+}
+
+.header-containsrc-chart .chart{
+    display: inline-block;
+    align-items: center;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    margin-right: 2rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.header-containsrc-chart .chart p{
+    visibility: hidden;
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    box-shadow: 1px 1px 2.4px 0 var(--shadow);
+    box-sizing: border-box;
+    border: 1px solid black;
+    transform: translateY(-5em);
+    transform: translateX(-10em);
+    transition: all 0.2s ease 0s, visibility 0s linier 0s, z-index 0s linier 0s;
+}
+
+.chart p{
+    color: var(--primary);
+    padding: 0.2rem;
+    text-decoration: none;
+    display: grid;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.2rem 1rem;
+    position: absolute;
+    margin-left: -13rem;
+    margin-top: 0.7rem;
+}
+
+.chart:hover p{
+    visibility: visible;
+    opacity: 1;
+    z-index: 400;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 1.2s;
+}

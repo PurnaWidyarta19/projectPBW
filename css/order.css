@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+}
+
+.box-out {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box-out h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+.box-in{
+    margin-top: 2rem;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+    top: 10px;
+}
+
+.input-box input, 
+.input-box select {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.input-jenis {
+    margin-bottom: 30px;
+}
+
+.jenis {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.jenis-cetak input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.lainnya {
+    display: block;
+    width: 95%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.qty {
+    margin-top: 5px;
+}
+
+.qty input[type="radio"] {
+    margin-right: 5px;
+}
+
+.input-file {
+    margin-bottom: 20px;
+}
+
+.input-file label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-file input[type="file"] {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-keterangan {
+    margin-bottom: 20px;
+}
+
+.input-keterangan label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-keterangan input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.form-submit input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.form-submit input[type="submit"]:hover {
+    background-color: #0056b3;
+}

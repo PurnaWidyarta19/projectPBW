@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto;
+    background-color: var(--bg);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto auto auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+  
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+  
+.before {
+    display: none;
+}
+  
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.main-image img {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+  
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+  
+td .ikon {
+    width: 40px;
+    text-align: center;
+}
+  
+td .kotak {
+    padding-left: 10px;
+}
+
+td .image_01{
+    padding-left: 10px;
+}
+  
+label b {
+    font-weight: bold;
+}
+  
+.box {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+button.update-btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+  
+a.option-btn {
+    padding: 8px 20px;
+    background-color: #ccc;
+    color: #000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.tombol{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
+}
+
+.tombol #update{
+    margin-left: 1rem;
+}
+  

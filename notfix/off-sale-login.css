@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto;
+    background-color: var(--bg);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
+}
+
+
+/*Main*/
+main .main-title{
+    margin-top: 0;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 5rem 0 0 0.5rem;
+    box-sizing: border-box;
+    color: var(--primary);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main .main-title h3{
+    margin-bottom: 0;
+    margin-left: 2rem;
+}
+
+.card-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big-box{
+    width: 90%;
+    height: max-content;
+    background-color: var(--bg);
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5px 0 0 var(--shadow);
+    text-align: center;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.big-box h3{
+    cursor: pointer;
+}
+
+.big-box h3:hover{
+    transform: scale(1.05);
+}
+
+.box{
+    width: 15em;
+    height: 20em;
+    background-color: var(--bg);
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+    margin: 2rem 0.8rem 2rem 0.8rem;
+    border: 1px solid var(--shadow);
+    box-shadow: 1px 1px 1px 0 var(--shadow);
+    overflow: hidden;
+}
+
+.box .box-img{
+    margin-top: 0.1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.box-img img{
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.box .beda{
+    width: max-content;
+}
+
+.box .box-text{
+    margin-bottom: 0.5rem;
+}
+
+.box-text .price-ikon{
+    display: flex;
+    padding-top: 0.5rem;
+}
+
+.box-text h3{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: var(--primary);
+}
+
+.box-text .input-beda{
+    margin-left: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+.box-text .input-beda p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.box-text .price-ikon .icon{
+    display: inline-flex;
+    width: 120px;
+    align-items: center;
+    padding: 0.2rem 1rem;
+}
+
+.box-text .price-ikon .icon i{
+    font-size: 1.8rem;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.icon i {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+.icon i:hover {
+    opacity: 0.8; 
+    color: hsl(210, 84%, 37%);
+  }
+
+.box-text .input{
+    margin-left: 0.5rem;
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80px;
+}
+
+.box-text .input .icon{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80px;
+    height: 20px;
+    padding: 5rem;
+}
+
+.box-text .input .icon .i{
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80px;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+
+/* Media Queries - Responsive */
+
+/* Iphone SE */
+@media (max-width: 375px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem auto 0.5rem;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone XR */
+@media (max-width: 414px){
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.3em;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone 12 Pro */
+@media (max-width: 390px){
+    nav{
+        font-size: 75%;
+        height: 3rem;
+        align-items: center;
+    }
+
+    .nav-left .bantuan{
+        align-items: center;
+        padding: 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    .follow-list{
+        display: flex;
+        align-items: center;
+    }
+
+    .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .chart{
+        margin-left: 0;
+    }
+
+    .nav-right{
+        margin-top: 0;
+        align-items: top;
+    }
+}
+
+/* Pixel 5 */
+@media (max-width: 393px){
+    nav{
+        height: 3rem;
+        font-size: 75%;
+    }
+
+    .nav-left .follow-list{
+        display: flex;
+    }
+}
+
+/* Samsung Galaxy S8*/
+@media (max-width: 360px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+        padding: 0 auto;
+    }
+
+    .header-containsrc-chart{
+        padding: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .chart{
+        font-size: 1rem;
+        margin: auto 0;
+        margin-left: 0.5rem;
+    }
+
+    .header-containsrc-chart{
+        font-size: 80%;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem;
+    }
+}
+
+/* Samsung Galaxy Fold */
+@media (max-width: 280px){
+    nav{
+        font-size: 70%;
+        height: 4rem;
+    }
+
+    .nav-left .follow-list{
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .cart{
+        right: -130%;
+    }
+}

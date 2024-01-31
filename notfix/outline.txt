@@ -1,0 +1,33 @@
+body
+1. logo Go Prints
+2. navigasi
+3. search
+4. logo keranjang, logo person, login
+
+main
+1. new arrivals
+2. offsale
+3. rekomendasi
+
+footer
+1. about us
+2. layanan pelanggan ( testimoni, heldesk, email, wa)
+3. bantuan (petunjuk pembayaran, syarat dan ketentuan, testimoni)
+4. ikuti kami (facebook, ig, youtube)
+5. metode pembayaran 
+
+
+Order
+1. buat form order
+2. setelah order (pake alert) untuk memberikan pesan berapa lama proses pengerjaan dan nomor wa yang bisa dihubungi
+atau bisa suruh ke Pusat bantuan bagian cara pemesanan untuk mengetahui lebih detail.
+
+
+
+Belum dikerjakan: 
+1. buat form upload testimoni
+2. tambahkan upload file di page-order
+3. setelah login masuk ke halaman page-login
+
+1. form confirmasi transfer
+2. order dipisahin atau ditambahkan ke bagian kategori (dengan nama percekatan)

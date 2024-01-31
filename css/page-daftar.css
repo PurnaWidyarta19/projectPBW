@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    background-color: var(--bcg);
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    box-sizing: border-box;
+    border-radius: 2rem 2rem;
+}
+
+.left{
+    display: flex;
+    padding-left: 0.1rem;
+    align-items: left;
+    margin-right: 1rem;
+}
+
+.header-containsrc-chart{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    box-sizing: border-box;
+    line-height: 2rem;
+    margin: 0;
+    padding-right: 1rem;
+    padding-left: 0.2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header-containsrc-chart .gp{
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: 0.5rem;
+    color: var(--bg);
+    padding-top: 0.1rem;
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart .gp img{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 162px;
+    box-sizing: border-box;
+}
+
+.header-containsrc-chart .gp a{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.header-containsrc-chart .gp{
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    color: var(--primary);
+    box-sizing: border-box;
+}
+
+.right a{
+    display: flex;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: .8125rem;
+    font-weight: 300;
+    padding: 0.25rem;
+}
+
+.right{
+    width: 10rem;
+    display: flex;
+    padding-left: 0.1rem;
+    align-items: left;
+    margin-right: 2rem;
+}
+
+.right .follow-list{
+    display: flex;
+    margin-top: 0.2rem;
+    justify-content: space-between;
+}
+
+.right .follow{
+    cursor: auto;
+}
+
+.right .follow::after{
+    transform: scaleX(0);
+}
+
+.right .follow:hover::after{
+    transform: scaleY(1);
+}
+
+.right .follow-list:hover{
+    color: grey;
+}
+
+/*Body*/
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10rem;
+    width: 100%;
+    background: url(image/1-bcg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.box-out{
+    margin-top: 2rem;
+    margin-bottom: 20%;
+    display: flex;
+    position: relative;
+    height: 42rem;
+    width: 30rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--shadow);
+    background: rgb(153, 153, 175, 0.5);
+    border-radius: 0.5rem;
+}
+
+body h2{
+    margin-top: -3rem;
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    align-items: center;
+}
+
+.message{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 10px;
+    background-color: var(--primary);
+    text-align: center;
+    z-index: 1000;
+    box-shadow: black;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.input-box{
+    position: relative;
+    margin: 1rem 0;
+    width: 23rem;
+    margin-left: 2rem;
+}
+
+.input-box label{
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    color: var(--primary);
+    font-size: 0.8em;
+    font-weight: 600;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus ~ label,
+input:focus ~ label{
+    top: -3px;
+}
+
+.input-box input{
+    width: 100%;
+    margin-top: 1em;
+    height: 1.5em;
+    background: transparent;
+    outline: none;
+    font-size: 0.9em;
+    padding: 0 35px 0 5px;
+    color: var(--primary);
+}
+
+.form-check{
+    display: flex;
+    margin-top: 0;
+    margin-left: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-check label{
+    font-size: 0.8em;
+    font-family: 200;
+}
+
+.form-check input{
+    margin-top: 0;
+    margin-right: 0.5rem;
+}
+
+.form-check a{
+    text-decoration: none;
+}
+
+.form-check a:hover{
+    text-decoration: underline;
+}
+
+.tombol{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+.tombol button{
+    position: absolute;
+    width: 20rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+button:hover{
+    border: 1px solid var(--primary);
+}

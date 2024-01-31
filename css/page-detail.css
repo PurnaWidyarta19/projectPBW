@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 8rem;
+    background-color: var(--bg);
+    font-family: "Poppins", sans-serif;
+}
+
+/*Main*/
+main{
+    display: flex;
+    /* margin-top: 5rem; */
+}
+
+main .box-img{
+    flex: 1.5;
+    margin: 2rem 5rem 2rem 5rem;
+    text-align: center;
+}
+
+/*Box Img*/
+.box-img .main-img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    width: 15rem;
+    border: 0.5px solid var(--shadow);
+    border-radius: 0.4rem;
+}
+
+.box-img .main-img img {
+    width: 150px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+.box-img .sub-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.box-img .sub-img img{
+    width: 70px;
+    height: 100px;
+}
+
+.box-img .sub-img img:hover {
+    opacity: 0.5;
+}
+
+.box-img .sub-img .gambar-1 {
+    margin-right: 0.5rem;
+    border: 1px solid var(--shadow);
+}
+.box-img .sub-img .gambar-2 {
+    margin-right: 0.5rem;
+    border: 1px solid var(--shadow);
+}
+.box-img .sub-img .gambar-3 {
+    margin-right: 0.5rem;
+    border: 1px solid var(--shadow);
+}
+
+.desc-order{
+    display: block;
+    width: 70%;
+}
+
+/*Box Text*/
+main .box-text{
+    flex: 2;
+    margin-right: 5rem;
+}
+
+.box-text .header h2{
+    margin-bottom: 0;
+}
+
+.box-text .price h4{
+    font-weight: 400;
+    font-size: 2rem;
+    color: darkred;
+    justify-items: left;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.box-text .price{
+    display: flex;
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+    background-color: rgb(150, 150, 175, 0.1);
+    width: 100%;
+    height: 5rem;
+    padding: 0 2rem;
+    justify-content: left;
+}
+
+.box-text .header hr{
+    width: 100%;
+    margin-left: 0;
+    color: var(--shadow);
+}
+
+
+.box-text #desc{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+#desc{
+    margin-top: 1rem;
+}
+
+.box-text .deskripsi p{
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
+
+/* Action */
+.box-text .action {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.action .chat {
+    margin: 1rem 0;
+    width: 13rem;
+    border: 1.5px solid var(--primary);
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.action .chat:hover {
+    background-color: #2664f5;
+    color: var(--bg);
+}
+
+.action .toCart {
+    width: 13rem;
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    border-radius: 0.6rem 0.8rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action .toCart:hover {
+    background-color: #2664f5;
+    color: var(--bg);
+}
+
+.action p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.action i {
+    margin-right: 0.5rem;
+}
+
+/* Media Queries - Responsive */
+
+/* Iphone SE */
+@media (max-width: 375px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem auto 0.5rem;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone XR */
+@media (max-width: 414px){
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.3em;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone 12 Pro */
+@media (max-width: 390px){
+    nav{
+        font-size: 75%;
+        height: 3rem;
+        align-items: center;
+    }
+
+    .nav-left .bantuan{
+        align-items: center;
+        padding: 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    .follow-list{
+        display: flex;
+        align-items: center;
+    }
+
+    .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .chart{
+        margin-left: 0;
+    }
+
+    .nav-right{
+        margin-top: 0;
+        align-items: top;
+    }
+}
+
+/* Pixel 5 */
+@media (max-width: 393px){
+    nav{
+        height: 3rem;
+        font-size: 75%;
+    }
+
+    .nav-left .follow-list{
+        display: flex;
+    }
+}
+
+/* Samsung Galaxy S8*/
+@media (max-width: 360px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+        padding: 0 auto;
+    }
+
+    .header-containsrc-chart{
+        padding: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .chart{
+        font-size: 1rem;
+        margin: auto 0;
+        margin-left: 0.5rem;
+    }
+
+    .header-containsrc-chart{
+        font-size: 80%;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem;
+    }
+}
+
+/* Samsung Galaxy Fold */
+@media (max-width: 280px){
+    nav{
+        font-size: 70%;
+        height: 4rem;
+    }
+
+    .nav-left .follow-list{
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .cart{
+        right: -130%;
+    }
+}

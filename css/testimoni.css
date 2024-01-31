@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg);
+    font-family: "Poppins", sans-serif;
+}
+
+/*Main*/
+.section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 20rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+
+.table{
+    margin-top: 5rem;
+    display: inline-block;
+    position: relative;
+    height: auto;
+    width: 80%;
+    background: var(--bg);
+    box-sizing: border-box;
+    box-shadow: 0 0.4rem 0.8rem var(--shadow);
+    border-radius: 0.5rem;
+}
+  
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.header h2 {
+    font-size: 24px;
+    color: #333;
+}
+  
+.box-in {
+    position: relative;
+}
+  
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+  
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    margin: 2px 0;
+}
+  
+.input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+  
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.review_btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.review_btn input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.review_btn input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+  
+#product_list {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 100%;
+}
+  
+#list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+#product_list li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+  
+#list li:hover {
+    background-color: #f2f2f2;
+}
+
+.header{
+    width: 100%;
+    height: 10%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.isi{
+    width: 80%;
+    height: 30rem;
+    background-color: var(--bg);
+    margin: 20px auto;
+    border-radius: 0.6rem;
+    overflow: overlay;
+    border: 1px solid var(--shadow);
+}
+
+.isi::-webkit-scrollbar-thumb{
+    margin-left: 1rem;
+    border: 0.5rem;
+    background-color: #0000;
+    visibility: hidden;
+}
+
+.isi:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    border-collapse: collapse;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--decor);
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even){
+    background-color: #0000000b;
+}
+
+tbody tr{
+    --delay: 0.1s;
+    transition: 0.5s ease-in-out var(--delay);
+}
+
+tbody tr.hide{
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover{
+    background-color: #fff6 !important ;
+}
+
+thead th span.icon-arrow {
+    display: inline-block;
+    width: 1rem;
+    height: 1.3rem;
+    text-align: center;
+    font-size: 1rem;
+    transition: .2s ease-in-out;
+    align-items: center;
+}
+
+thead th:hover {
+    color: var(--primary);
+}
+
+thead th.active span.icon-arrow{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+thead th.asc span.icon-arrow{
+    transform: rotate(180deg);
+}
+
+thead th.active,tbody td.active {
+    color: var(--primary);
+}
+
+thead th{
+    width: 7rem;
+}
+
+thead .username{
+    width: 5rem;
+}
+
+thead .beda{
+    width: 2rem;
+}
+
+.beda{
+    text-align: center;
+}
+
+/* Media Queries - Responsive */
+
+/* Iphone SE */
+@media (max-width: 375px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem auto 0.5rem;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone XR */
+@media (max-width: 414px){
+    .nav-right .menu-profil i{
+        font-size: 0.8em;
+    }
+
+    .header-containsrc-chart .gp{
+        margin-left: 0;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.3em;
+    }
+
+    .header-containsrc-chart .chart{
+        margin: auto 0;
+    }
+}
+
+/* Iphone 12 Pro */
+@media (max-width: 390px){
+    nav{
+        font-size: 75%;
+        height: 3rem;
+        align-items: center;
+    }
+
+    .nav-left .bantuan{
+        align-items: center;
+        padding: 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    .follow-list{
+        display: flex;
+        align-items: center;
+    }
+
+    .follow-list a{
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .chart{
+        margin-left: 0;
+    }
+
+    .nav-right{
+        margin-top: 0;
+        align-items: top;
+    }
+}
+
+/* Pixel 5 */
+@media (max-width: 393px){
+    nav{
+        height: 3rem;
+        font-size: 75%;
+    }
+
+    .nav-left .follow-list{
+        display: flex;
+    }
+}
+
+/* Samsung Galaxy S8*/
+@media (max-width: 360px){
+    .nav-left .follow-list a{
+        align-items: center;
+        margin-top: 0;
+        padding: 0 auto;
+    }
+
+    .header-containsrc-chart{
+        padding: 0;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .chart{
+        font-size: 1rem;
+        margin: auto 0;
+        margin-left: 0.5rem;
+    }
+
+    .header-containsrc-chart{
+        font-size: 80%;
+    }
+
+    .header-containsrc-chart .kategori-icon{
+        margin: auto 0.5rem;
+    }
+}
+
+/* Samsung Galaxy Fold */
+@media (max-width: 280px){
+    nav{
+        font-size: 70%;
+        height: 4rem;
+    }
+
+    .nav-left .follow-list{
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .header-containsrc-chart .gp img{
+        height: 30px;
+        width: 121px;
+    }
+
+    .header-containsrc-chart .cart{
+        right: -130%;
+    }
+}

@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --primary: rgb(58, 60, 66);
+    --decor: #ff9900;
+    --bcg: #ff0000;
+    --bg: #fafaff;
+    --shadow: rgb(153, 153, 175);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto;
+    background-color: var(--bg);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
+}
+
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+.box{
+    width: 15em;
+    height: 20em;
+    background-color: var(--bg);
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+    margin: 2rem 0.8rem 2rem 0.8rem;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 0 var(--shadow);
+    overflow: hidden;
+}
+
+.box .box-img{
+    margin-top: 0.1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.box-img img{
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.box .beda{
+    width: max-content;
+}
+
+.box .box-text{
+    margin-bottom: 0.5rem;
+}
+
+.box-text .price-ikon{
+    display: flex;
+    padding-top: 0.5rem;
+}
+
+.box-text .product-title{
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: var(--primary);
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+}
+
+.box-text .input-beda{
+    margin-left: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+.box-text .input-beda p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.box-text .price-ikon .icon{
+    display: inline-flex;
+    width: 120px;
+    align-items: center;
+    padding: 0.2rem 1rem;
+}
+
+.box-text .price-ikon .icon i{
+    font-size: 1.8rem;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.icon i {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+.icon i:hover {
+    opacity: 0.8; 
+    color: hsl(210, 84%, 37%);
+  }
+
+.box-text .input{
+    margin-left: 0.5rem;
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80px;
+}
+
+.box-text .input .icon{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80px;
+    height: 20px;
+    padding: 5rem;
+}
+
+.box-text .input .icon .i{
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80px;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.price{
+    font-size: 1rem;
+    font-weight: 500;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-btn{
+    margin-top: 1rem;
+    padding: -.5rem 0 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.desc{
+    margin-top: 2rem;
+    border: 1px solid var(--decor);
+}
